@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-20T22:55:00-07:00",
+  "updated": "2026-04-20T23:01-07:00",
   "home": {
     "address": "1299 Cordova St, Pasadena, CA",
     "lat": 34.1427164,
     "lon": -118.1238939
   },
-  "distance_method": "straight-line miles via geopy/Nominatim. drive_time_min is null until a Google Distance Matrix API key is added at credentials/google_maps_key.txt.",
+  "distance_method": "driving miles + traffic-aware drive time via Google Routes API (next Sat 11am local departure).",
   "sources": [
     {
       "name": "Fever",
@@ -97,8 +97,8 @@
           "free": true,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/jump-flow-la-meetup-jump-roperope-flowdouble-dutchflow-arts-free-event-tickets-1985422474066",
-          "distance_miles": 9.2,
-          "drive_time_min": null
+          "distance_miles": 11.0,
+          "drive_time_min": 24
         },
         {
           "id": "w1-02",
@@ -113,8 +113,8 @@
           "free": false,
           "source": "Skirball Cultural Center",
           "url": "https://www.skirball.org/programs/skirball-puppet-festival",
-          "distance_miles": 20.4,
-          "drive_time_min": null
+          "distance_miles": 25.6,
+          "drive_time_min": 41
         },
         {
           "id": "w1-03",
@@ -129,8 +129,8 @@
           "free": true,
           "source": "spcaLA",
           "url": "https://spcala.com/event/pups-and-putts/",
-          "distance_miles": 17.1,
-          "drive_time_min": null
+          "distance_miles": 20.0,
+          "drive_time_min": 40
         },
         {
           "id": "w1-04",
@@ -145,8 +145,8 @@
           "free": true,
           "source": "CicLAvia",
           "url": "https://www.ciclavia.org/",
-          "distance_miles": 19.3,
-          "drive_time_min": null
+          "distance_miles": 24.6,
+          "drive_time_min": 48
         },
         {
           "id": "w1-05",
@@ -161,8 +161,8 @@
           "free": true,
           "source": "City of STEM",
           "url": "https://cityofstem.org/",
-          "distance_miles": 12.7,
-          "drive_time_min": null
+          "distance_miles": 15.4,
+          "drive_time_min": 33
         },
         {
           "id": "w1-06",
@@ -177,8 +177,8 @@
           "free": true,
           "source": "Jackalope Art Fair",
           "url": "https://www.jackalopeartfair.com/pasadena",
-          "distance_miles": 1.5,
-          "drive_time_min": null
+          "distance_miles": 1.7,
+          "drive_time_min": 7
         },
         {
           "id": "w1-07",
@@ -194,8 +194,8 @@
           "source": "Give Hope Studios",
           "url": "https://www.givehopestudios.com/",
           "unverified": true,
-          "distance_miles": 9.1,
-          "drive_time_min": null
+          "distance_miles": 14.5,
+          "drive_time_min": 29
         },
         {
           "id": "w1-08",
@@ -211,8 +211,8 @@
           "source": "Mid East Eats (IG)",
           "url": "https://www.instagram.com/mid.east.eats/",
           "unverified": true,
-          "distance_miles": 15.3,
-          "drive_time_min": null
+          "distance_miles": 17.4,
+          "drive_time_min": 37
         },
         {
           "id": "w1-09",
@@ -228,8 +228,8 @@
           "source": "Peak Design",
           "url": "https://www.peakdesign.com/",
           "unverified": true,
-          "distance_miles": 22.5,
-          "drive_time_min": null
+          "distance_miles": 27.9,
+          "drive_time_min": 58
         },
         {
           "id": "w1-10",
@@ -245,8 +245,8 @@
           "source": "Eventbrite (search)",
           "url": "https://www.eventbrite.com/d/ca--burbank/gospel-skate/",
           "unverified": true,
-          "distance_miles": 11.5,
-          "drive_time_min": null
+          "distance_miles": 15.5,
+          "drive_time_min": 24
         }
       ]
     },
@@ -268,8 +268,8 @@
           "free": true,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/theremin-the-very-first-electronic-instrument-tickets-1980143321980",
-          "distance_miles": 6.8,
-          "drive_time_min": null
+          "distance_miles": 9.4,
+          "drive_time_min": 19
         },
         {
           "id": "w2-02",
@@ -284,8 +284,8 @@
           "free": false,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/night-at-the-library-a-century-of-light-tickets-1983486245755",
-          "distance_miles": 9.9,
-          "drive_time_min": null
+          "distance_miles": 11.8,
+          "drive_time_min": 27
         },
         {
           "id": "w2-03",
@@ -300,8 +300,8 @@
           "free": false,
           "source": "Renaissance Pleasure Faire",
           "url": "https://renfair.com/socal/",
-          "distance_miles": 9.7,
-          "drive_time_min": null
+          "distance_miles": 14.5,
+          "drive_time_min": 22
         },
         {
           "id": "w2-04",
@@ -316,8 +316,8 @@
           "free": false,
           "source": "Fever",
           "url": "https://feverup.com/m/584108",
-          "distance_miles": 10.7,
-          "drive_time_min": null,
+          "distance_miles": 13.8,
+          "drive_time_min": 30,
           "unverified": true
         },
         {
@@ -333,8 +333,8 @@
           "free": true,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/may-the-4th-be-with-you-la-underground-rave-tickets-1985181249557",
-          "distance_miles": 13.2,
-          "drive_time_min": null
+          "distance_miles": 16.4,
+          "drive_time_min": 37
         },
         {
           "id": "w2-06",
@@ -349,8 +349,8 @@
           "free": false,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/a-current-affair-pop-up-vintage-marketplace-in-los-angeles-spring-2026-tickets-1982314624404",
-          "distance_miles": 14.5,
-          "drive_time_min": null
+          "distance_miles": 23.5,
+          "drive_time_min": 45
         },
         {
           "id": "w2-07",
@@ -365,8 +365,8 @@
           "free": false,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/its-uncommon-love-spring-tea-gathering-tickets-1979398149148",
-          "distance_miles": 15.2,
-          "drive_time_min": null
+          "distance_miles": 18.0,
+          "drive_time_min": 41
         },
         {
           "id": "w2-08",
@@ -381,8 +381,8 @@
           "free": true,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/1st-annual-martial-arts-and-mindfulness-conference-2026-tickets-1981252158540",
-          "distance_miles": 15.0,
-          "drive_time_min": null
+          "distance_miles": 20.6,
+          "drive_time_min": 48
         },
         {
           "id": "w2-09",
@@ -397,8 +397,8 @@
           "free": false,
           "source": "Eventbrite",
           "url": "https://www.eventbrite.com/e/in-person-class-artisan-ravioli-making-los-angeles-tickets-701299645117",
-          "distance_miles": 15.2,
-          "drive_time_min": null
+          "distance_miles": 18.3,
+          "drive_time_min": 38
         },
         {
           "id": "w2-10",
@@ -413,8 +413,8 @@
           "free": false,
           "source": "LACMA",
           "url": "https://www.lacma.org/",
-          "distance_miles": 14.8,
-          "drive_time_min": null,
+          "distance_miles": 19.6,
+          "drive_time_min": 48,
           "unverified": true
         }
       ]
