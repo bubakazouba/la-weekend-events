@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA Weekend Events — weirdest 10</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2332;
+    --panel2: #233148;
+    --text: #e8eef4;
+    --muted: #8b9bb4;
+    --accent: #f4a261;
+    --accent2: #4ea8de;
+    --good: #6ee7b7;
+    --warn: #fbbf24;
+    --star: #f4a261;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px; line-height: 1.45; }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.01em; }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .sub .upd { color: var(--accent); }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 18px; }
+
+  .weekend-toggle { display: flex; gap: 6px; flex-wrap: wrap; }
+  .weekend-toggle button {
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--panel2); border-radius: 8px;
+    padding: 8px 14px; font-size: 14px; cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .weekend-toggle button:hover { background: var(--panel2); }
+  .weekend-toggle button.active {
+    background: var(--accent); color: #1a1a1a;
+    border-color: var(--accent); font-weight: 600;
+  }
+
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+  .filters label {
+    background: var(--panel); border: 1px solid var(--panel2);
+    border-radius: 8px; padding: 8px 12px; font-size: 13px;
+    display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;
+  }
+  .filters label:hover { background: var(--panel2); }
+  .filters input[type=checkbox] { accent-color: var(--accent); cursor: pointer; }
+
+  .count-line { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--panel);
+    border-radius: 12px; overflow: hidden; font-size: 14px; }
+  th, td { padding: 12px 14px; text-align: left; vertical-align: top; }
+  th { background: var(--panel2); color: var(--muted); font-weight: 500; font-size: 12px;
+    letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; user-select: none; }
+  th:hover { color: var(--text); }
+  th .arrow { opacity: 0.4; margin-left: 4px; font-size: 10px; }
+  th.sorted .arrow { opacity: 1; color: var(--accent); }
+  tr { border-top: 1px solid var(--panel2); }
+  tr:first-child { border-top: none; }
+  tr:hover td { background: rgba(78, 168, 222, 0.04); }
+
+  .title { font-weight: 600; color: var(--text); }
+  .blurb { color: var(--muted); font-size: 13px; margin-top: 3px; }
+  .venue { color: var(--muted); font-size: 13px; }
+  .when { color: var(--text); font-size: 13px; }
+  .when .t { color: var(--muted); display: block; }
+
+  .stars { color: var(--star); white-space: nowrap; font-size: 13px; }
+  .stars .dim { color: var(--panel2); }
+
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 11px; letter-spacing: 0.02em; font-weight: 600; }
+  .tag.free   { background: rgba(110, 231, 183, 0.15); color: var(--good); }
+  .tag.paid   { background: rgba(139, 155, 180, 0.15); color: var(--muted); }
+
+  .placeholder {
+    background: var(--panel); border: 1px dashed var(--panel2);
+    padding: 22px 20px; border-radius: 12px; color: var(--muted); font-size: 14px;
+  }
+  .placeholder b { color: var(--text); font-weight: 600; }
+
+  .sources {
+    margin-top: 40px; background: var(--panel); border-radius: 12px; padding: 18px 20px;
+  }
+  .sources h2 { margin: 0 0 10px; font-size: 15px; color: var(--muted);
+    font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+  .sources ul { list-style: none; padding: 0; margin: 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px 14px; }
+  .sources li { font-size: 13px; }
+  .sources li .from {
+    color: var(--muted); font-size: 11px; margin-left: 6px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>LA Weekend Events — weirdest 10</h1>
+    <div class="sub">Curated weekly via <span style="color:var(--accent2)">@sahmoud_remind_bot</span>.
+      Last updated <span class="upd" id="upd">—</span>.
+      Skip mainstream concerts / sports / galas — we're looking for cyphers, jump rope, puppets, pop-up choirs, immersive, costume parties, weird food fests.
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="weekend-toggle" id="weekendToggle"></div>
+    <div class="filters">
+      <label><input type="checkbox" id="freeOnly"> Free only</label>
+      <label><input type="checkbox" id="weird3Only"> ⭐⭐⭐ only</label>
+    </div>
+  </div>
+
+  <div class="count-line" id="count"></div>
+  <div id="body"></div>
+
+  <section class="sources">
+    <h2>Sources</h2>
+    <ul id="sourceList"></ul>
+  </section>
+
+  <footer>
+    Data: <a href="events.json">events.json</a> ·
+    Updated weekly by Claude via <a href="https://t.me/sahmoud_remind_bot">@sahmoud_remind_bot</a>
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+let activeIdx = 0;
+let sortKey = "weirdness";
+let sortDir = -1;
+
+async function load() {
+  const r = await fetch("events.json?_=" + Date.now());
+  DATA = await r.json();
+  document.getElementById("upd").textContent =
+    new Date(DATA.updated).toLocaleString(undefined,
+      { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  renderToggle();
+  renderSources();
+  renderBody();
+}
+
+function renderToggle() {
+  const el = document.getElementById("weekendToggle");
+  el.innerHTML = "";
+  DATA.weekends.forEach((w, i) => {
+    const b = document.createElement("button");
+    b.textContent = w.label + (w.events.length ? "" : " ·");
+    if (i === activeIdx) b.classList.add("active");
+    b.onclick = () => { activeIdx = i; renderToggle(); renderBody(); };
+    el.appendChild(b);
+  });
+}
+
+function stars(n) {
+  let s = "";
+  for (let i = 1; i <= 3; i++) s += i <= n ? "⭐" : '<span class="dim">⭐</span>';
+  return `<span class="stars">${s}</span>`;
+}
+
+function cmp(a, b, key) {
+  const va = a[key], vb = b[key];
+  if (typeof va === "number" && typeof vb === "number") return va - vb;
+  return String(va).localeCompare(String(vb));
+}
+
+function renderBody() {
+  const w = DATA.weekends[activeIdx];
+  const body = document.getElementById("body");
+  const countEl = document.getElementById("count");
+
+  if (!w.events || w.events.length === 0) {
+    countEl.textContent = "";
+    body.innerHTML = `<div class="placeholder">
+      <b>Not generated yet.</b> ${w.placeholder || "Check back later."}
+    </div>`;
+    return;
+  }
+
+  const freeOnly = document.getElementById("freeOnly").checked;
+  const weird3 = document.getElementById("weird3Only").checked;
+
+  let events = w.events.slice();
+  if (freeOnly) events = events.filter(e => e.free);
+  if (weird3) events = events.filter(e => e.weirdness === 3);
+  events.sort((a, b) => sortDir * cmp(a, b, sortKey));
+
+  countEl.textContent = `${events.length} of ${w.events.length} event${w.events.length === 1 ? "" : "s"} shown`;
+
+  const cols = [
+    { key: "title", label: "Event" },
+    { key: "date",  label: "When" },
+    { key: "venue", label: "Where" },
+    { key: "weirdness", label: "Weird" },
+    { key: "free",  label: "Cost" },
+  ];
+
+  const thead = cols.map(c => {
+    const sorted = c.key === sortKey;
+    const arrow = sorted ? (sortDir === 1 ? "↑" : "↓") : "↕";
+    return `<th class="${sorted ? "sorted" : ""}" data-key="${c.key}">
+      ${c.label}<span class="arrow">${arrow}</span></th>`;
+  }).join("");
+
+  const rows = events.map(e => `
+    <tr>
+      <td>
+        <div class="title">${e.url ? `<a href="${e.url}" target="_blank" rel="noopener">${escapeHtml(e.title)}</a>` : escapeHtml(e.title)}</div>
+        <div class="blurb">${escapeHtml(e.blurb || "")}</div>
+      </td>
+      <td class="when">
+        ${escapeHtml(e.date)}
+        ${e.time ? `<span class="t">${escapeHtml(e.time)}</span>` : ""}
+      </td>
+      <td class="venue">${escapeHtml(e.venue)}</td>
+      <td>${stars(e.weirdness)}</td>
+      <td>${e.free
+        ? '<span class="tag free">FREE</span>'
+        : '<span class="tag paid">paid</span>'}</td>
+    </tr>
+  `).join("");
+
+  body.innerHTML = `<table>
+    <thead><tr>${thead}</tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+
+  body.querySelectorAll("th[data-key]").forEach(th => {
+    th.onclick = () => {
+      const k = th.dataset.key;
+      if (k === sortKey) sortDir = -sortDir;
+      else { sortKey = k; sortDir = (k === "weirdness") ? -1 : 1; }
+      renderBody();
+    };
+  });
+}
+
+function renderSources() {
+  const ul = document.getElementById("sourceList");
+  ul.innerHTML = DATA.sources.map(s =>
+    `<li><a href="${s.url}" target="_blank" rel="noopener">${escapeHtml(s.name)}</a><span class="from">${s.from}</span></li>`
+  ).join("");
+}
+
+function escapeHtml(str) {
+  return String(str || "")
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+document.getElementById("freeOnly").addEventListener("change", renderBody);
+document.getElementById("weird3Only").addEventListener("change", renderBody);
+
+load().catch(err => {
+  document.getElementById("body").innerHTML =
+    `<div class="placeholder">Failed to load events.json: ${err.message}</div>`;
+});
+</script>
+</body>
+</html>

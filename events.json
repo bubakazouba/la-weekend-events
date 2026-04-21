@@ -1,0 +1,169 @@
+{
+  "updated": "2026-04-20T19:30:00-07:00",
+  "sources": [
+    { "name": "Fever",                 "url": "https://feverup.com/en/los-angeles",                                          "from": "becky" },
+    { "name": "los-angeles.events",    "url": "https://los-angeles.events/",                                                 "from": "becky" },
+    { "name": "Groupon LA",            "url": "https://www.groupon.com/local/los-angeles/things-to-do",                      "from": "becky" },
+    { "name": "Discover Los Angeles",  "url": "https://www.discoverlosangeles.com/events",                                   "from": "becky" },
+    { "name": "Time Out LA",           "url": "https://www.timeout.com/los-angeles",                                         "from": "becky" },
+    { "name": "Travel Today LA",       "url": "https://www.traveltodayla.com/things-to-do-in-la",                            "from": "becky" },
+    { "name": "Secret LA",             "url": "https://secretlosangeles.com/things-to-do/",                                  "from": "becky" },
+    { "name": "Visit California",      "url": "https://www.visitcalifornia.com/things-to-do/",                               "from": "becky" },
+    { "name": "Eventbrite LA",         "url": "https://www.eventbrite.com/d/ca--los-angeles/events/",                        "from": "becky" },
+    { "name": "Downtown LA",           "url": "https://downtownla.com/calendar",                                             "from": "becky" },
+    { "name": "Tripadvisor LA",        "url": "https://www.tripadvisor.com/Attractions-g32655-Activities-Los_Angeles_California.html", "from": "becky" },
+    { "name": "We Like LA",            "url": "https://welikela.com/things-to-do-this-weekend/",                             "from": "claude" },
+    { "name": "LA Fun Cheap",          "url": "https://lafuncheap.com/",                                                     "from": "claude" },
+    { "name": "Luma LA",               "url": "https://luma.com/la",                                                         "from": "claude" }
+  ],
+  "weekends": [
+    {
+      "label": "Apr 25-26",
+      "start": "2026-04-25",
+      "end":   "2026-04-26",
+      "events": [
+        {
+          "id": "w1-01",
+          "title": "Jump Flow LA Meetup",
+          "date": "Sat 4/25",
+          "time": "10am-1pm",
+          "venue": "Gloria Molina Grand Park (DTLA)",
+          "blurb": "Jump rope + double dutch + rope flow + flow arts. All skill levels. Hosted by Jump Flow LA / SlushRopes / Let's Jump LA / Melanated Jump Squad.",
+          "weirdness": 3,
+          "free": true,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/jump-flow-la-meetup-jump-roperope-flowdouble-dutchflow-arts-free-event-tickets-1985422474066"
+        },
+        {
+          "id": "w1-02",
+          "title": "Skirball Puppet Festival",
+          "date": "Sun 4/26",
+          "time": "all day",
+          "venue": "Skirball Cultural Center",
+          "blurb": "Puppets in all shapes and sizes. Live music + DIY make-your-own-puppet workshop.",
+          "weirdness": 3,
+          "free": false,
+          "source": "Skirball",
+          "url": "https://www.skirball.org/"
+        },
+        {
+          "id": "w1-03",
+          "title": "Pups & Putts",
+          "date": "Sat 4/25",
+          "time": "11am-3pm",
+          "venue": "Ivy Station",
+          "blurb": "Mini-golf alongside adoptable shelter dogs from spcaLA on the central lawn.",
+          "weirdness": 2,
+          "free": true,
+          "source": "Ivy Station",
+          "url": "https://www.ivystation.com/events"
+        },
+        {
+          "id": "w1-04",
+          "title": "CicLAvia: West LA",
+          "date": "Sun 4/26",
+          "time": "9am-4pm",
+          "venue": "Westwood → Santa Monica",
+          "blurb": "Several miles of streets closed to cars. Walk, skate, run, or cycle the route with activity hubs along the way.",
+          "weirdness": 2,
+          "free": true,
+          "source": "CicLAvia",
+          "url": "https://www.ciclavia.org/"
+        },
+        {
+          "id": "w1-05",
+          "title": "City of STEM Festival + LA Maker Faire",
+          "date": "Sun 4/26",
+          "time": "9am-5pm",
+          "venue": "Exposition Park",
+          "blurb": "200+ exhibitors with hands-on activities, live-action roleplay, Rubik's Cube competitions, mini RC lowriders, food trucks.",
+          "weirdness": 2,
+          "free": true,
+          "source": "City of STEM",
+          "url": "https://cityofstem.org/"
+        },
+        {
+          "id": "w1-06",
+          "title": "Jackalope Indie Artisan Fair",
+          "date": "Sat 4/25 + Sun 4/26",
+          "time": "all day",
+          "venue": "Central Park, Old Pasadena",
+          "blurb": "Over 200 local indie vendors selling handmade goods, art, and food in an outdoor all-ages marketplace.",
+          "weirdness": 2,
+          "free": true,
+          "source": "Jackalope Art Fair",
+          "url": "https://www.jackalopeartfair.com/"
+        },
+        {
+          "id": "w1-07",
+          "title": "\"Spring Into Summer\" Pop-Up Choir (Lizzy McAlpine songs)",
+          "date": "Sat 4/25",
+          "time": "evening",
+          "venue": "Give Hope Studios",
+          "blurb": "Show up, sing communally with strangers, leave.",
+          "weirdness": 3,
+          "free": false,
+          "source": "Give Hope Studios",
+          "url": "https://www.givehopestudios.com/"
+        },
+        {
+          "id": "w1-08",
+          "title": "Mid East Eats — final weekend",
+          "date": "Sat 4/25 + Sun 4/26",
+          "time": "lunch + dinner",
+          "venue": "Maydan Market, West Adams",
+          "blurb": "South-LA Palestinian home cook takeover: musakhan, falafel nachos, kunafeh. Walk-ins only.",
+          "weirdness": 2,
+          "free": false,
+          "source": "Maydan Market",
+          "url": "https://www.instagram.com/maydanmarketla/"
+        },
+        {
+          "id": "w1-09",
+          "title": "\"Fight Club: A Second Discussion\" book club",
+          "date": "Sat 4/25",
+          "time": "evening",
+          "venue": "Peak Design LA Store, Venice",
+          "blurb": "Yes, that book.",
+          "weirdness": 3,
+          "free": true,
+          "source": "Peak Design",
+          "url": "https://www.peakdesign.com/"
+        },
+        {
+          "id": "w1-10",
+          "title": "Gospel Skate LA",
+          "date": "Sat 4/25",
+          "time": "evening",
+          "venue": "LA Kings Burbank Sports Center",
+          "blurb": "Faith-based roller skating jam (currently sold out — waitlist worth a shot).",
+          "weirdness": 3,
+          "free": false,
+          "source": "Gospel Skate",
+          "url": "https://www.eventbrite.com/o/gospel-skate-la"
+        }
+      ]
+    },
+    {
+      "label": "May 2-3",
+      "start": "2026-05-02",
+      "end":   "2026-05-03",
+      "events": [],
+      "placeholder": "Auto-populated Mon 4/27 ~10:08am via @sahmoud_remind_bot reminder #10."
+    },
+    {
+      "label": "May 9-10",
+      "start": "2026-05-09",
+      "end":   "2026-05-10",
+      "events": [],
+      "placeholder": "Auto-populated Mon 5/4 ~10:08am via @sahmoud_remind_bot reminder #11."
+    },
+    {
+      "label": "May 16-17",
+      "start": "2026-05-16",
+      "end":   "2026-05-17",
+      "events": [],
+      "placeholder": "Auto-populated Mon 5/11 ~10:08am via @sahmoud_remind_bot reminder #12."
+    }
+  ]
+}
