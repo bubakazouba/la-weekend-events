@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-20T19:30:00-07:00",
+  "updated": "2026-04-20T22:25:00-07:00",
   "sources": [
     { "name": "Fever",                 "url": "https://feverup.com/en/los-angeles",                                          "from": "becky" },
     { "name": "los-angeles.events",    "url": "https://los-angeles.events/",                                                 "from": "becky" },
@@ -28,7 +28,9 @@
           "date": "Sat 4/25",
           "time": "10am-1pm",
           "venue": "Gloria Molina Grand Park (DTLA)",
-          "blurb": "Jump rope + double dutch + rope flow + flow arts. All skill levels. Hosted by Jump Flow LA / SlushRopes / Let's Jump LA / Melanated Jump Squad.",
+          "blurb": "Jump rope + double dutch + rope flow + flow arts. All skill levels.",
+          "description": "Free, all-ages community gathering in DTLA where participants jump, do rope flow, and double-dutch at Grand Park. Hosted collaboratively by SLUSHROPES, Let's Jump LA, Jump Flow LA, and Melanated Jump Squad — newcomers and seasoned practitioners both welcome.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1180113954%2F2991578962346%2F1%2Foriginal.20260318-053334?w=600&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=d1d508f60b6f9be023bf3b14164f8575",
           "weirdness": 3,
           "free": true,
           "source": "Eventbrite",
@@ -38,25 +40,29 @@
           "id": "w1-02",
           "title": "Skirball Puppet Festival",
           "date": "Sun 4/26",
-          "time": "all day",
+          "time": "12pm-5pm",
           "venue": "Skirball Cultural Center",
           "blurb": "Puppets in all shapes and sizes. Live music + DIY make-your-own-puppet workshop.",
+          "description": "Premier puppetry performances alongside interactive activities — puppet-making workshops, live music, roaming character encounters, pop-up micro shows. Featured image: a child staring excitedly at a red dragon puppet in the courtyard.",
+          "image": "https://www.skirball.org/sites/default/files/styles/teaser_medium/public/2026-02/PuppetFest_2026_main.jpg?h=0cbfc052&itok=870jGdQj",
           "weirdness": 3,
           "free": false,
-          "source": "Skirball",
-          "url": "https://www.skirball.org/"
+          "source": "Skirball Cultural Center",
+          "url": "https://www.skirball.org/programs/skirball-puppet-festival"
         },
         {
           "id": "w1-03",
           "title": "Pups & Putts",
           "date": "Sat 4/25",
-          "time": "11am-3pm",
-          "venue": "Ivy Station",
-          "blurb": "Mini-golf alongside adoptable shelter dogs from spcaLA on the central lawn.",
+          "time": "12pm-2pm",
+          "venue": "Ivy Station, Culver City",
+          "blurb": "18-hole mini golf alongside adoptable shelter dogs from spcaLA.",
+          "description": "spcaLA hosts an 18-hole mini-golf course on the lawn at Ivy Station in Culver City. Play a round, meet adoptable dogs from the spcaLA Pet Adoption Center, possibly leave with a new best friend.",
+          "image": "https://eadn-wc04-6027823.nxedge.io/wp-content/uploads/2026/03/pups-putts-WebEvent.webp",
           "weirdness": 2,
           "free": true,
-          "source": "Ivy Station",
-          "url": "https://www.ivystation.com/events"
+          "source": "spcaLA",
+          "url": "https://spcala.com/event/pups-and-putts/"
         },
         {
           "id": "w1-04",
@@ -64,7 +70,9 @@
           "date": "Sun 4/26",
           "time": "9am-4pm",
           "venue": "Westwood → Santa Monica",
-          "blurb": "Several miles of streets closed to cars. Walk, skate, run, or cycle the route with activity hubs along the way.",
+          "blurb": "Several miles of streets closed to cars. Walk, skate, run, or cycle.",
+          "description": "Sunday's car-free open-streets event with the route running from Westwood to Santa Monica. CicLAvia 'catalyzes vibrant public spaces, active transportation and good health' — activity hubs along the way for resting, snacking, and people-watching.",
+          "image": "https://assets.nationbuilder.com/ciclavia/pages/6656/meta_images/original/ciclavia_West_LA_042626_digital_comms_route_map_website_homepage_1200x850.png?1776113257",
           "weirdness": 2,
           "free": true,
           "source": "CicLAvia",
@@ -76,7 +84,9 @@
           "date": "Sun 4/26",
           "time": "9am-5pm",
           "venue": "Exposition Park",
-          "blurb": "200+ exhibitors with hands-on activities, live-action roleplay, Rubik's Cube competitions, mini RC lowriders, food trucks.",
+          "blurb": "200+ exhibitors, hands-on activities, live-action roleplay, Rubik's Cube comp, mini RC lowriders.",
+          "description": "Returns 4/26 to Expo Park with 200+ exhibitors celebrating science, technology, engineering, and math. Billed as 'SoCal's largest celebration of science, making, creativity, and invention' — hands-on activities, food trucks, live entertainment, free.",
+          "image": "https://images.squarespace-cdn.com/content/v1/61f5e69803af6715dc886eb9/34db7fa1-9563-464c-878d-1f8b73989f43/COS2026_HomepageHeader_2.4.26_v2.jpg",
           "weirdness": 2,
           "free": true,
           "source": "City of STEM",
@@ -88,11 +98,13 @@
           "date": "Sat 4/25 + Sun 4/26",
           "time": "all day",
           "venue": "Central Park, Old Pasadena",
-          "blurb": "Over 200 local indie vendors selling handmade goods, art, and food in an outdoor all-ages marketplace.",
+          "blurb": "200+ local indie artisans selling handmade goods. Live music, food vendors, family activities.",
+          "description": "The Jackalope Art Fair returns to Old Pasadena's Central Park 4/25-26 with 200+ local hand-selected artisans offering original fashion, jewelry, home décor, art, and more. Live music, family activities, food vendors throughout the weekend.",
+          "image": "https://static.wixstatic.com/media/9c1228_f9e44b2a0301476da6531fcf844f98c5~mv2.jpg/v1/fill/w_900,h_650,al_c,q_85/9c1228_f9e44b2a0301476da6531fcf844f98c5~mv2.jpg",
           "weirdness": 2,
           "free": true,
           "source": "Jackalope Art Fair",
-          "url": "https://www.jackalopeartfair.com/"
+          "url": "https://www.jackalopeartfair.com/pasadena"
         },
         {
           "id": "w1-07",
@@ -101,22 +113,28 @@
           "time": "evening",
           "venue": "Give Hope Studios",
           "blurb": "Show up, sing communally with strangers, leave.",
+          "description": "Fan-organized pop-up choir singing through Lizzy McAlpine's catalog. Low-commitment communal singing with strangers — no audition, no rehearsal, just a one-night thing.",
+          "image": null,
           "weirdness": 3,
           "free": false,
           "source": "Give Hope Studios",
-          "url": "https://www.givehopestudios.com/"
+          "url": "https://www.givehopestudios.com/",
+          "unverified": true
         },
         {
           "id": "w1-08",
-          "title": "Mid East Eats — final weekend",
+          "title": "Mid East Eats",
           "date": "Sat 4/25 + Sun 4/26",
           "time": "lunch + dinner",
           "venue": "Maydan Market, West Adams",
-          "blurb": "South-LA Palestinian home cook takeover: musakhan, falafel nachos, kunafeh. Walk-ins only.",
+          "blurb": "Palestinian home-cook pop-up: musakhan, falafel nachos, kunafeh.",
+          "description": "South-LA Palestinian home cook takeover at Maydan Market: musakhan, falafel nachos, kunafeh. Walk-ins only. NOTE: per @mid.east.eats Instagram the residency runs through 4/26 but recent reporting suggests the final weekend was 4/19-20 — verify before going.",
+          "image": null,
           "weirdness": 2,
           "free": false,
-          "source": "Maydan Market",
-          "url": "https://www.instagram.com/maydanmarketla/"
+          "source": "Mid East Eats (IG)",
+          "url": "https://www.instagram.com/mid.east.eats/",
+          "unverified": true
         },
         {
           "id": "w1-09",
@@ -125,10 +143,13 @@
           "time": "evening",
           "venue": "Peak Design LA Store, Venice",
           "blurb": "Yes, that book.",
+          "description": "Book club discussing Chuck Palahniuk's Fight Club, hosted at Peak Design's Venice flagship store. Format unconfirmed via search engines — likely an indie/word-of-mouth gathering organized by the store.",
+          "image": null,
           "weirdness": 3,
           "free": true,
           "source": "Peak Design",
-          "url": "https://www.peakdesign.com/"
+          "url": "https://www.peakdesign.com/",
+          "unverified": true
         },
         {
           "id": "w1-10",
@@ -137,10 +158,13 @@
           "time": "evening",
           "venue": "LA Kings Burbank Sports Center",
           "blurb": "Faith-based roller skating jam (currently sold out — waitlist worth a shot).",
+          "description": "Faith-based roller-skating jam at LA Kings Burbank Sports Center. Currently sold out per source — joining the waitlist may still be worth it. Format borrowed from the longer-running Gospel Skate Dallas.",
+          "image": null,
           "weirdness": 3,
           "free": false,
-          "source": "Gospel Skate",
-          "url": "https://www.eventbrite.com/o/gospel-skate-la"
+          "source": "Eventbrite (search)",
+          "url": "https://www.eventbrite.com/d/ca--burbank/gospel-skate/",
+          "unverified": true
         }
       ]
     },
@@ -164,6 +188,34 @@
       "end":   "2026-05-17",
       "events": [],
       "placeholder": "Auto-populated Mon 5/11 ~10:08am via @sahmoud_remind_bot reminder #12."
+    },
+    {
+      "label": "May 23-24",
+      "start": "2026-05-23",
+      "end":   "2026-05-24",
+      "events": [],
+      "placeholder": "Auto-populated Mon 5/18 via @sahmoud_remind_bot (TBD scheduling)."
+    },
+    {
+      "label": "May 30-31",
+      "start": "2026-05-30",
+      "end":   "2026-05-31",
+      "events": [],
+      "placeholder": "Auto-populated Mon 5/25 via @sahmoud_remind_bot (TBD scheduling)."
+    },
+    {
+      "label": "Jun 6-7",
+      "start": "2026-06-06",
+      "end":   "2026-06-07",
+      "events": [],
+      "placeholder": "Auto-populated Mon 6/1 via @sahmoud_remind_bot (TBD scheduling)."
+    },
+    {
+      "label": "Jun 13-14",
+      "start": "2026-06-13",
+      "end":   "2026-06-14",
+      "events": [],
+      "placeholder": "Auto-populated Mon 6/8 via @sahmoud_remind_bot (TBD scheduling)."
     }
   ]
 }
