@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-20T23:20-07:00",
+  "updated": "2026-04-20T23:40-07:00",
   "home": {
     "address": "1299 Cordova St, Pasadena, CA",
     "lat": 34.1427164,
@@ -450,6 +450,23 @@
           "distance_miles": 18.4,
           "drive_time_min": 31,
           "unverified": true
+        },
+        {
+          "id": "w2-13",
+          "title": "TCM Classic Film Festival 2026 — \"The World Comes to Hollywood\"",
+          "date": "Sat 5/2 + Sun 5/3",
+          "time": "all day (fest runs Apr 30 – May 3)",
+          "venue": "Hollywood Roosevelt + TCL Chinese, Egyptian, Hollywood Legion theatres",
+          "blurb": "17th annual cinephile pilgrimage: restored 35mm prints, handprints, celebrity Q&As.",
+          "description": "TCM's four-day festival of classic film — this year's theme celebrates immigrant pioneers of cinema. Includes a 75th-anniversary world-premiere restoration of Alice in Wonderland, a 90th-anniversary Modern Times, The Day the Earth Stood Still, and a Glenn Close hand-and-footprint ceremony at TCL Chinese. Passes sell out; individual tickets trickle onto resale.",
+          "image": null,
+          "weirdness": 2,
+          "free": false,
+          "source": "TCM",
+          "url": "https://filmfestival.tcm.com/",
+          "distance_miles": 17.8,
+          "drive_time_min": 34,
+          "unverified": true
         }
       ]
     },
@@ -741,6 +758,22 @@
           "url": "https://la.smorgasburg.com",
           "distance_miles": 13.6,
           "drive_time_min": 29
+        },
+        {
+          "id": "w4-09",
+          "title": "MVP + Netflix: Ronda Rousey vs. Gina Carano",
+          "date": "Sat 5/16",
+          "time": "doors early, main card 8pm PT",
+          "venue": "Intuit Dome, 3930 W Century Blvd, Inglewood",
+          "blurb": "Netflix's first live MMA: Rousey–Carano headlines, Nate Diaz vs Mike Perry + Ngannou vs Lins on the card.",
+          "description": "Most Valuable Promotions and Netflix's first MMA event ever — Ronda Rousey vs. Gina Carano at 145lb (two legends, first time fighting each other), with Nate Diaz vs Mike Perry and Francis Ngannou vs Philipe Lins as co-features. Streams globally on Netflix but if you can be in the room, this is a once-in-a-lifetime card.",
+          "image": "https://discover-losangeles.com/sites/default/files/styles/max_1920x1920_kraken/public/images/2026-04/ronda-rousey-vs-gina-carano.jpg.webp",
+          "weirdness": 3,
+          "free": false,
+          "source": "Most Valuable Promotions",
+          "url": "https://www.ticketmaster.com/mvp-and-netflix-present-ronda-rousey-inglewood-california-05-16-2026/event/0900646414E58CC8",
+          "distance_miles": 25.4,
+          "drive_time_min": 46
         }
       ]
     },
