@@ -99,6 +99,8 @@
   .card .title a:hover { color: var(--accent2); }
   .card .meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; line-height: 1.45; }
   .card .meta .when { color: var(--text); }
+  .card .meta .dist { color: var(--accent2); font-size: 12px; }
+  .card .meta .dist .pending { color: var(--muted); font-style: italic; }
   .card .desc { color: var(--text); font-size: 13.5px; line-height: 1.5; flex: 1; }
   .card .src {
     margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--panel2);
@@ -148,6 +150,7 @@
     <div class="sub">Curated weekly via <span style="color:var(--accent2)">@sahmoud_remind_bot</span>.
       Last updated <span class="upd" id="upd">—</span>.
       Skip mainstream concerts / sports / galas — we're after cyphers, jump rope, puppets, pop-up choirs, immersive performance, weird food fests.
+      <br><span style="color:var(--muted)">Distances from <b id="homeAddr" style="color:var(--accent)">—</b> (straight-line; drive times pending Maps API key).</span>
     </div>
   </header>
 
@@ -157,6 +160,7 @@
       <label><input type="checkbox" id="freeOnly"> Free only</label>
       <label><input type="checkbox" id="weird3Only"> ⭐⭐⭐ only</label>
       <label><input type="checkbox" id="hideUnv"> Hide unverified</label>
+      <label><input type="checkbox" id="sortByDist"> Sort by distance</label>
     </div>
   </div>
 
@@ -184,6 +188,7 @@ async function load() {
   document.getElementById("upd").textContent =
     new Date(DATA.updated).toLocaleString(undefined,
       { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  if (DATA.home && DATA.home.address) document.getElementById("homeAddr").textContent = DATA.home.address;
   // default to first weekend that has events
   const firstWithEvents = DATA.weekends.findIndex(w => w.events && w.events.length);
   if (firstWithEvents >= 0) activeIdx = firstWithEvents;
@@ -230,15 +235,23 @@ function renderBody() {
   const freeOnly = document.getElementById("freeOnly").checked;
   const weird3 = document.getElementById("weird3Only").checked;
   const hideUnv = document.getElementById("hideUnv").checked;
+  const sortByDist = document.getElementById("sortByDist").checked;
 
   let events = w.events.slice();
   if (freeOnly) events = events.filter(e => e.free);
   if (weird3) events = events.filter(e => e.weirdness === 3);
   if (hideUnv) events = events.filter(e => !e.unverified);
 
-  // sort by weirdness desc then by title
-  events.sort((a, b) =>
-    (b.weirdness - a.weirdness) || a.title.localeCompare(b.title));
+  if (sortByDist) {
+    events.sort((a, b) => {
+      const ad = a.distance_miles ?? 9999;
+      const bd = b.distance_miles ?? 9999;
+      return ad - bd;
+    });
+  } else {
+    events.sort((a, b) =>
+      (b.weirdness - a.weirdness) || a.title.localeCompare(b.title));
+  }
 
   countEl.textContent = `${events.length} of ${w.events.length} event${w.events.length === 1 ? "" : "s"} shown`;
 
@@ -272,11 +285,21 @@ function card(e) {
       <div class="meta">
         <span class="when">${escapeHtml(e.date)}${e.time ? ' · ' + escapeHtml(e.time) : ''}</span><br>
         ${escapeHtml(e.venue)}
+        ${distLine(e)}
       </div>
       <div class="desc">${escapeHtml(e.description || e.blurb || '')}</div>
       <div class="src">via ${e.url ? `<a href="${escapeAttr(e.url)}" target="_blank" rel="noopener">${escapeHtml(e.source || 'source')}</a>` : escapeHtml(e.source || 'source')}</div>
     </div>
   </div>`;
+}
+
+function distLine(e) {
+  if (e.distance_miles == null) return '';
+  const mi = e.distance_miles.toFixed(1);
+  const time = (e.drive_time_min != null)
+    ? `${Math.round(e.drive_time_min)} min drive`
+    : `<span class="pending">(drive time pending API key)</span>`;
+  return `<br><span class="dist">📍 ${mi} mi · ${time}</span>`;
 }
 
 function renderSources() {
@@ -295,7 +318,7 @@ function escapeAttr(str) {
   return String(str || "").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-["freeOnly","weird3Only","hideUnv"].forEach(id =>
+["freeOnly","weird3Only","hideUnv","sortByDist"].forEach(id =>
   document.getElementById(id).addEventListener("change", renderBody));
 
 load().catch(err => {

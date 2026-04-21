@@ -1,26 +1,88 @@
 {
-  "updated": "2026-04-20T22:25:00-07:00",
+  "updated": "2026-04-20T22:55:00-07:00",
+  "home": {
+    "address": "1299 Cordova St, Pasadena, CA",
+    "lat": 34.1427164,
+    "lon": -118.1238939
+  },
+  "distance_method": "straight-line miles via geopy/Nominatim. drive_time_min is null until a Google Distance Matrix API key is added at credentials/google_maps_key.txt.",
   "sources": [
-    { "name": "Fever",                 "url": "https://feverup.com/en/los-angeles",                                          "from": "becky" },
-    { "name": "los-angeles.events",    "url": "https://los-angeles.events/",                                                 "from": "becky" },
-    { "name": "Groupon LA",            "url": "https://www.groupon.com/local/los-angeles/things-to-do",                      "from": "becky" },
-    { "name": "Discover Los Angeles",  "url": "https://www.discoverlosangeles.com/events",                                   "from": "becky" },
-    { "name": "Time Out LA",           "url": "https://www.timeout.com/los-angeles",                                         "from": "becky" },
-    { "name": "Travel Today LA",       "url": "https://www.traveltodayla.com/things-to-do-in-la",                            "from": "becky" },
-    { "name": "Secret LA",             "url": "https://secretlosangeles.com/things-to-do/",                                  "from": "becky" },
-    { "name": "Visit California",      "url": "https://www.visitcalifornia.com/things-to-do/",                               "from": "becky" },
-    { "name": "Eventbrite LA",         "url": "https://www.eventbrite.com/d/ca--los-angeles/events/",                        "from": "becky" },
-    { "name": "Downtown LA",           "url": "https://downtownla.com/calendar",                                             "from": "becky" },
-    { "name": "Tripadvisor LA",        "url": "https://www.tripadvisor.com/Attractions-g32655-Activities-Los_Angeles_California.html", "from": "becky" },
-    { "name": "We Like LA",            "url": "https://welikela.com/things-to-do-this-weekend/",                             "from": "claude" },
-    { "name": "LA Fun Cheap",          "url": "https://lafuncheap.com/",                                                     "from": "claude" },
-    { "name": "Luma LA",               "url": "https://luma.com/la",                                                         "from": "claude" }
+    {
+      "name": "Fever",
+      "url": "https://feverup.com/en/los-angeles",
+      "from": "becky"
+    },
+    {
+      "name": "los-angeles.events",
+      "url": "https://los-angeles.events/",
+      "from": "becky"
+    },
+    {
+      "name": "Groupon LA",
+      "url": "https://www.groupon.com/local/los-angeles/things-to-do",
+      "from": "becky"
+    },
+    {
+      "name": "Discover Los Angeles",
+      "url": "https://www.discoverlosangeles.com/events",
+      "from": "becky"
+    },
+    {
+      "name": "Time Out LA",
+      "url": "https://www.timeout.com/los-angeles",
+      "from": "becky"
+    },
+    {
+      "name": "Travel Today LA",
+      "url": "https://www.traveltodayla.com/things-to-do-in-la",
+      "from": "becky"
+    },
+    {
+      "name": "Secret LA",
+      "url": "https://secretlosangeles.com/things-to-do/",
+      "from": "becky"
+    },
+    {
+      "name": "Visit California",
+      "url": "https://www.visitcalifornia.com/things-to-do/",
+      "from": "becky"
+    },
+    {
+      "name": "Eventbrite LA",
+      "url": "https://www.eventbrite.com/d/ca--los-angeles/events/",
+      "from": "becky"
+    },
+    {
+      "name": "Downtown LA",
+      "url": "https://downtownla.com/calendar",
+      "from": "becky"
+    },
+    {
+      "name": "Tripadvisor LA",
+      "url": "https://www.tripadvisor.com/Attractions-g32655-Activities-Los_Angeles_California.html",
+      "from": "becky"
+    },
+    {
+      "name": "We Like LA",
+      "url": "https://welikela.com/things-to-do-this-weekend/",
+      "from": "claude"
+    },
+    {
+      "name": "LA Fun Cheap",
+      "url": "https://lafuncheap.com/",
+      "from": "claude"
+    },
+    {
+      "name": "Luma LA",
+      "url": "https://luma.com/la",
+      "from": "claude"
+    }
   ],
   "weekends": [
     {
       "label": "Apr 25-26",
       "start": "2026-04-25",
-      "end":   "2026-04-26",
+      "end": "2026-04-26",
       "events": [
         {
           "id": "w1-01",
@@ -34,7 +96,9 @@
           "weirdness": 3,
           "free": true,
           "source": "Eventbrite",
-          "url": "https://www.eventbrite.com/e/jump-flow-la-meetup-jump-roperope-flowdouble-dutchflow-arts-free-event-tickets-1985422474066"
+          "url": "https://www.eventbrite.com/e/jump-flow-la-meetup-jump-roperope-flowdouble-dutchflow-arts-free-event-tickets-1985422474066",
+          "distance_miles": 9.2,
+          "drive_time_min": null
         },
         {
           "id": "w1-02",
@@ -48,7 +112,9 @@
           "weirdness": 3,
           "free": false,
           "source": "Skirball Cultural Center",
-          "url": "https://www.skirball.org/programs/skirball-puppet-festival"
+          "url": "https://www.skirball.org/programs/skirball-puppet-festival",
+          "distance_miles": 20.4,
+          "drive_time_min": null
         },
         {
           "id": "w1-03",
@@ -62,7 +128,9 @@
           "weirdness": 2,
           "free": true,
           "source": "spcaLA",
-          "url": "https://spcala.com/event/pups-and-putts/"
+          "url": "https://spcala.com/event/pups-and-putts/",
+          "distance_miles": 17.1,
+          "drive_time_min": null
         },
         {
           "id": "w1-04",
@@ -76,7 +144,9 @@
           "weirdness": 2,
           "free": true,
           "source": "CicLAvia",
-          "url": "https://www.ciclavia.org/"
+          "url": "https://www.ciclavia.org/",
+          "distance_miles": 19.3,
+          "drive_time_min": null
         },
         {
           "id": "w1-05",
@@ -90,7 +160,9 @@
           "weirdness": 2,
           "free": true,
           "source": "City of STEM",
-          "url": "https://cityofstem.org/"
+          "url": "https://cityofstem.org/",
+          "distance_miles": 12.7,
+          "drive_time_min": null
         },
         {
           "id": "w1-06",
@@ -104,7 +176,9 @@
           "weirdness": 2,
           "free": true,
           "source": "Jackalope Art Fair",
-          "url": "https://www.jackalopeartfair.com/pasadena"
+          "url": "https://www.jackalopeartfair.com/pasadena",
+          "distance_miles": 1.5,
+          "drive_time_min": null
         },
         {
           "id": "w1-07",
@@ -119,7 +193,9 @@
           "free": false,
           "source": "Give Hope Studios",
           "url": "https://www.givehopestudios.com/",
-          "unverified": true
+          "unverified": true,
+          "distance_miles": 9.1,
+          "drive_time_min": null
         },
         {
           "id": "w1-08",
@@ -134,7 +210,9 @@
           "free": false,
           "source": "Mid East Eats (IG)",
           "url": "https://www.instagram.com/mid.east.eats/",
-          "unverified": true
+          "unverified": true,
+          "distance_miles": 15.3,
+          "drive_time_min": null
         },
         {
           "id": "w1-09",
@@ -149,7 +227,9 @@
           "free": true,
           "source": "Peak Design",
           "url": "https://www.peakdesign.com/",
-          "unverified": true
+          "unverified": true,
+          "distance_miles": 22.5,
+          "drive_time_min": null
         },
         {
           "id": "w1-10",
@@ -164,56 +244,220 @@
           "free": false,
           "source": "Eventbrite (search)",
           "url": "https://www.eventbrite.com/d/ca--burbank/gospel-skate/",
-          "unverified": true
+          "unverified": true,
+          "distance_miles": 11.5,
+          "drive_time_min": null
         }
       ]
     },
     {
       "label": "May 2-3",
       "start": "2026-05-02",
-      "end":   "2026-05-03",
-      "events": [],
-      "placeholder": "Auto-populated Mon 4/27 ~10:08am via @sahmoud_remind_bot reminder #10."
+      "end": "2026-05-03",
+      "events": [
+        {
+          "id": "w2-01",
+          "title": "Theremin: The Very First Electronic Instrument",
+          "date": "Sat 5/2",
+          "time": "2pm-3:30pm",
+          "venue": "1150 Cypress Ave, Cypress Park",
+          "blurb": "Live demo + history of Leon Theremin's 1928 invention. Try playing it yourself.",
+          "description": "Hands-on presentation about the theremin — the first mass-produced electronic instrument, played without touching it (just waving hands near antennas). Attendees get to actually play one. Hosted in a small Cypress Park space; the kind of niche history-of-tech meetup you'd never find unless you went looking.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1174361169%2F159160083956%2F1%2Foriginal.20260108-223638",
+          "weirdness": 3,
+          "free": true,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/theremin-the-very-first-electronic-instrument-tickets-1980143321980",
+          "distance_miles": 6.8,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-02",
+          "title": "Night at the Library: A Century of Light",
+          "date": "Sat 5/2",
+          "time": "7pm-11pm (VIP 6pm)",
+          "venue": "LA Central Library, 630 W 5th St, DTLA",
+          "blurb": "Immersive after-hours fest celebrating the library's 100th — 200+ performers, art, food, dancing.",
+          "description": "Once-a-century party at the Richard J. Riordan Central Library: 200+ performers, artists, and storytellers wander the stacks alongside light installations, interactive art, live music, and dancing. The library you know during the day, transformed.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177887145%2F267072737568%2F1%2Foriginal.20260218-230110",
+          "weirdness": 3,
+          "free": false,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/night-at-the-library-a-century-of-light-tickets-1983486245755",
+          "distance_miles": 9.9,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-03",
+          "title": "Renaissance Pleasure Faire",
+          "date": "Sat 5/2 + Sun 5/3",
+          "time": "10am-7pm",
+          "venue": "Santa Fe Dam Rec Area, 15501 E Arrow Hwy, Irwindale",
+          "blurb": "20-acre Elizabethan world: full-armor jousts, period acts, costume welcome.",
+          "description": "Returning weekends Apr 4 - May 17. Twenty acres of Elizabethan re-enactment in Irwindale: armored jousting tournaments, period stage acts, themed weekends, tea with the queen. Costumes encouraged but not required. Tickets ~$53 adult.",
+          "image": "https://renfair.com/socal/wp-content/uploads/sites/2/2016/02/rf-logo-250.png",
+          "weirdness": 3,
+          "free": false,
+          "source": "Renaissance Pleasure Faire",
+          "url": "https://renfair.com/socal/",
+          "distance_miles": 9.7,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-04",
+          "title": "May The Force Seduce You — Burlesque Parody",
+          "date": "Sat 5/2",
+          "time": "evening",
+          "venue": "The Cat's Crawl, 660 Heliotrope Dr, East Hollywood",
+          "blurb": "Star Wars burlesque parody. Yes, that's exactly what it is.",
+          "description": "Comedic burlesque parody at the Cat's Crawl, a Heliotrope-district performance hall (also a private-event/film space). The May 4 Star Wars Day energy applied to a burlesque revue. Tickets from $62. Two-night run May 1-2.",
+          "image": null,
+          "weirdness": 3,
+          "free": false,
+          "source": "Fever",
+          "url": "https://feverup.com/m/584108",
+          "distance_miles": 10.7,
+          "drive_time_min": null,
+          "unverified": true
+        },
+        {
+          "id": "w2-05",
+          "title": "May the 4th Be With You — LA Underground Rave",
+          "date": "Sat 5/2 + Sun 5/3",
+          "time": "9pm-2am",
+          "venue": "Catch One, 4067 W Pico Blvd, Mid-City",
+          "blurb": "Star Wars-themed underground rave. Cosmic décor, lasers, two stages, costumes welcome.",
+          "description": "Underground rave at Catch One built around the May 4 / Star Wars Day theme: cosmic décor, laser shows, two stages of EDM, space-inspired costumes encouraged, photo booth. Doors 8:30pm. Free entry per the Eventbrite listing.",
+          "image": "https://img.evbuc.com/https%3A%252F%252Fcdn.evbuc.com%252Fimages%252F1179864837%252F230921157622%252F1%252Foriginal.20260315-013808",
+          "weirdness": 2,
+          "free": true,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/may-the-4th-be-with-you-la-underground-rave-tickets-1985181249557",
+          "distance_miles": 13.2,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-06",
+          "title": "A Current Affair: Pop-Up Vintage Marketplace",
+          "date": "Sat 5/2 + Sun 5/3",
+          "time": "10am-5pm",
+          "venue": "8175 Melrose Ave, West Hollywood",
+          "blurb": "50+ premier vintage retailers — Victorian to present. Curated.",
+          "description": "Twice-yearly curated vintage shopping: 50+ premier dealers showing clothing, accessories, and jewelry from the Victorian era through present day. Saturday early-admission gets you first pick. Spring 2026 edition.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176617624%2F22570277688%2F1%2Foriginal.20260203-223556",
+          "weirdness": 2,
+          "free": false,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/a-current-affair-pop-up-vintage-marketplace-in-los-angeles-spring-2026-tickets-1982314624404",
+          "distance_miles": 14.5,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-07",
+          "title": "It's UNCOMMON LOVE: Spring Tea Gathering",
+          "date": "Sat 5/2",
+          "time": "1:30pm-4:30pm",
+          "venue": "Barbara Morrison Performing Arts Ctr, 4305 Degnan Blvd, Leimert Park",
+          "blurb": "Charity tea + fashion + art benefiting women's education programs.",
+          "description": "Springtime fundraiser at the Barbara Morrison Performing Arts Center in Leimert Park: tea service, a fashion presentation, and art exhibits, with proceeds supporting education and entrepreneurship training for women and underserved communities. Listed as 'almost full' — book ahead.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1182085440%2F304177052298%2F1%2Foriginal.20260413-222846",
+          "weirdness": 2,
+          "free": false,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/its-uncommon-love-spring-tea-gathering-tickets-1979398149148",
+          "distance_miles": 15.2,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-08",
+          "title": "Martial Arts + Mindfulness Conference (kids)",
+          "date": "Sun 5/3",
+          "time": "1pm-4pm",
+          "venue": "Jun Chong Martial Arts, 6340 Wilshire Blvd",
+          "blurb": "Free family workshop: breathing, mindfulness, MA principles. Grades 1-6.",
+          "description": "Inaugural community workshop for school-age kids (grades 1-6) and families: breathing techniques, mindfulness exercises, and martial-arts principles to build focus and resilience. Doors 12:40pm. Free.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176455266%2F2989515916411%2F1%2Foriginal.20260202-151408",
+          "weirdness": 2,
+          "free": true,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/1st-annual-martial-arts-and-mindfulness-conference-2026-tickets-1981252158540",
+          "distance_miles": 15.0,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-09",
+          "title": "Artisan Ravioli Making Class",
+          "date": "Sun 5/3",
+          "time": "5pm",
+          "venue": "Green Haus Kitchen Studio, 7416 Vermont Ave, South LA",
+          "blurb": "Hands-on: dough, sheet rolling, ricotta filling, romesco sauce.",
+          "description": "Three-ish hour pasta workshop: mixing dough, rolling sheets, prepping ricotta filling, building a romesco sauce. You leave knowing how to make ravioli from scratch. Recurring; Sunday 5/3 is one of the dates.",
+          "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F578594789%2F79175508931%2F1%2Foriginal.20230818-225437",
+          "weirdness": 1,
+          "free": false,
+          "source": "Eventbrite",
+          "url": "https://www.eventbrite.com/e/in-person-class-artisan-ravioli-making-los-angeles-tickets-701299645117",
+          "distance_miles": 15.2,
+          "drive_time_min": null
+        },
+        {
+          "id": "w2-10",
+          "title": "LACMA NexGenLA Free Sunday",
+          "date": "Sun 5/3",
+          "time": "11am-6pm",
+          "venue": "LACMA, 5905 Wilshire Blvd",
+          "blurb": "Free LACMA admission for kids 17 & under (NexGenLA program). Inaugural Blue Chip collection on view.",
+          "description": "Sunday 5/3 is a NexGenLA day at LACMA — free admission for LA County residents 17 and under. The inaugural installation of the museum's Blue Chip collection is on view through this date. Niche-adjacent but legit free for families with kids.",
+          "image": null,
+          "weirdness": 1,
+          "free": false,
+          "source": "LACMA",
+          "url": "https://www.lacma.org/",
+          "distance_miles": 14.8,
+          "drive_time_min": null,
+          "unverified": true
+        }
+      ]
     },
     {
       "label": "May 9-10",
       "start": "2026-05-09",
-      "end":   "2026-05-10",
+      "end": "2026-05-10",
       "events": [],
       "placeholder": "Auto-populated Mon 5/4 ~10:08am via @sahmoud_remind_bot reminder #11."
     },
     {
       "label": "May 16-17",
       "start": "2026-05-16",
-      "end":   "2026-05-17",
+      "end": "2026-05-17",
       "events": [],
       "placeholder": "Auto-populated Mon 5/11 ~10:08am via @sahmoud_remind_bot reminder #12."
     },
     {
       "label": "May 23-24",
       "start": "2026-05-23",
-      "end":   "2026-05-24",
+      "end": "2026-05-24",
       "events": [],
       "placeholder": "Auto-populated Mon 5/18 via @sahmoud_remind_bot (TBD scheduling)."
     },
     {
       "label": "May 30-31",
       "start": "2026-05-30",
-      "end":   "2026-05-31",
+      "end": "2026-05-31",
       "events": [],
       "placeholder": "Auto-populated Mon 5/25 via @sahmoud_remind_bot (TBD scheduling)."
     },
     {
       "label": "Jun 6-7",
       "start": "2026-06-06",
-      "end":   "2026-06-07",
+      "end": "2026-06-07",
       "events": [],
       "placeholder": "Auto-populated Mon 6/1 via @sahmoud_remind_bot (TBD scheduling)."
     },
     {
       "label": "Jun 13-14",
       "start": "2026-06-13",
-      "end":   "2026-06-14",
+      "end": "2026-06-14",
       "events": [],
       "placeholder": "Auto-populated Mon 6/8 via @sahmoud_remind_bot (TBD scheduling)."
     }
